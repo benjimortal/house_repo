@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <style>
+        body {
+            background-image: url("{% static 'andrew.jpg' %}");
+            background-repeat:no-repeat;
+            background-size: cover;
+
+        }
+        h1{
+            color: DarkBlue;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input{
+            margin-top: 50px;
+        }
+
+        div{
+            font-size: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Please enter the following values:</h1>
+        <form method="Result">
+            <div class="rows">
+                <div class="col-sm-4" style="background-color:Gray;")>
+                <p>Housing Median Income</p>
+                <input type="text" name="n1">
+                </div>
+                <div class="col-sm-4" style="background-color:LightGreen;")>
+                <p>Housing Median Age</p>
+                <input type="text" name="n2">
+                </div>
+                <div class="col-sm-4" style="background-color:Pink;")>
+                <p>Housing Total Rooms</p>
+                <input type="text" name="n3">
+                </div>
+            </div>
+            <div class="rows">
+                <div class="col-sm-4" style="background-color:DarkTurquoise;")>
+                <p>Housing Total Bedrooms</p>
+                <input type="text" name="n4">
+                </div>
+                <div class="col-sm-4" style="background-color:coral;")>
+                <p>Housing Population</p>
+                <input type="text" name="n5">
+                </div>
+            </div>
+            <div class="rows">
+                <input type="submit", value="Predict">
+            </div>
+        </form>
+        <div class="rows">
+            <h2>{{ result2 }}</h2>
+        </div>
+    </div>
+</body>
+</html>

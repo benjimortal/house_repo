@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body{
+            background-image: url("{% static 'unsplash.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+        h1{
+            font_size:40px;
+            margin-top: 150px;
+        }
+        input[type='submit']{
+            background-color: #000000;
+            color: white;
+            cursor: pointer;
+            padding: 16px 32px;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+    <h1>Welcome to my house price prediction page! </h1>
+    <form action="/predict">
+        <input type="submit" value="Start">
+    </form>
+</body>
+</html>
